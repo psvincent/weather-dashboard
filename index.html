@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+    <h1 class="row justify-content-center">Weather Dashboard</h1>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+        <aside class="col-sm-3">
+            <form>
+                <h3>Search for a City:</h3>
+                <input id="city-input" type="text" placeholder="Enter a city"/>
+                <button class="btn" id="search" type="submit">Search</button>
+            </form>
+            <div 
+            class="search-history" id="history">
+        </div>
+        </aside>
+        <div class="col-sm-9">
+        <section class="row h-50" id="forecast">
+            <h2 id="current-city-date"></h2>
+            <p id="temperature"></p>
+            <p id="wind"></p>
+            <p id="humidity"></p>
+            <p id="uvindex"></p>
+        </section>
+        <section class="row h-50">
+            <h4 class="col-sm-12">5-Day Forecast:</h4>
+            <div class="col-sm-12">
+                <div class="flex-row row-12" id="five-day-forecast"></div>
+            </div>
+        </section>
+        </div>
+            
+        
+        
+    </div>
+    
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./assets/script.js"></script>
+</body>
+</html>
