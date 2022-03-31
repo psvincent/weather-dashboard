@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
     <header>
-    <h1 class="row justify-content-center">Weather Dashboard</h1>
+    <h1 class=" container center-align">Weather Dashboard</h1>
     </header>
     <div class="container-fluid">
         <div class="row">
-        <aside class="col-sm-3">
+        <aside class="col sm3">
             <form>
                 <h3>Search for a City:</h3>
                 <input id="city-input" type="text" placeholder="Enter a city"/>
@@ -25,19 +24,21 @@
             class="search-history" id="history">
         </div>
         </aside>
-        <div class="col-sm-9">
-        <section class="row h-50" id="forecast">
-            <h2 id="current-city-date"></h2>
+        <div class="col sm9">
+        <section class="row" id="forecast">
+            <h2 class="col sm6" id="current-city-date"></h2>
             <p id="temperature"></p>
             <p id="wind"></p>
             <p id="humidity"></p>
             <p id="uvindex"></p>
         </section>
-        <section class="row h-50">
-            <h4 class="col-sm-12">5-Day Forecast:</h4>
-            <div class="col-sm-12">
-                <div class="flex-row row-12" id="five-day-forecast"></div>
-            </div>
+        <section class="row">
+            <h4 class="col sm12">5-Day Forecast:</h4>
+            <div class="col sm2 fiveDay"></div>
+            <div class="col sm2 fiveDay"></div>
+            <div class="col sm2 fiveDay"></div>
+            <div class="col sm2 fiveDay"></div>
+            <div class="col sm2 fiveDay"></div>
         </section>
         </div>
             
