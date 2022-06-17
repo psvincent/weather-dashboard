@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset=    "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
-    <h1 class=" container center-align">Weather Dashboard</h1>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-        <aside class="col sm3">
-            <form>
-                <h3>Search for a City:</h3>
-                <input id="city-input" type="text" placeholder="Enter a city"/>
-                <button class="btn" id="search" type="submit">Search</button>
+   <header class="bg-blue text-white text-center p-1">
+       <h1>Weather Dashboard</h1>
+   </header>
+   <main class="container-fluid">
+    <section class="row">
+        <div class="col-3 p-1 search-row">
+            <form class=" border p-1 text-center" id="city-search">
+                <h5>Search for a City</h5>
+                <input id="city-input" type="text" placeholder="Enter City Name Here"/>
+                <button class="btn btn-primary" id="search-button" type="submit">Search</button>
             </form>
-            <div 
-            class="search-history" id="history">
         </div>
-        </aside>
-        <div class="col sm9">
-        <section class="row" id="forecast">
-            <h2 class="col sm6" id="current-city-date"></h2>
-            <p id="temperature"></p>
-            <p id="wind"></p>
-            <p id="humidity"></p>
-            <p id="uvindex"></p>
-        </section>
-        <section class="row">
-            <h4 class="col sm12">5-Day Forecast:</h4>
-            <div class="col sm2 fiveDay"></div>
-            <div class="col sm2 fiveDay"></div>
-            <div class="col sm2 fiveDay"></div>
-            <div class="col sm2 fiveDay"></div>
-            <div class="col sm2 fiveDay"></div>
-        </section>
+        <ul class="list-group" id="past-searches">
+
+        </ul>
+        <div class="col-sm-9 mt-3">
+            <div class="col-6 mx-2" id="city-weather">
+                <h5 id ="city"></h5>
+                <h5 id="date"></h5>
+                <h5 id="icon"></h5>
+                <h5 id="temp"></h5>
+                <h5 id="humidity"></h5>
+                <h5 id="wind"></h5>
+                <h5 id="uv"></h5>
+            </div>
         </div>
-            
-        
-        
-    </div>
+        <div>
+            <h4>Five Day Forecast:</h4>
+        </div>
+        <div class="row-col-sm-2 g-4 m-2 card" id="forecast">
+
+        </div>
+    </section>
+   </main>
     
 
 
 
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/plugin/utc.js"></script>
 <script src="./assets/script.js"></script>
 </body>
 </html>
