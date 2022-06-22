@@ -1,19 +1,12 @@
 // grabbing ids from html and assigning them to variables in js
-const  list = document.querySelector("ul");
-const searchButton = document.getElementById("search-button");
-const cityEntered = document.getElementById("city-input");
-const pastCities = document.getElementById("past-searches");
-const city = document.getElementById("city");
-const date = document.getElementById("date");
-const icon = document.getElementById("icon");
-const temp = document.getElementById("temp");
-const humidity = document.getElementById("humidity");
-const wind = document.getElementById("wind");
-const uv = document.getElementById("uv");
-const forecast = document.getElementById("forecast");
+var  list = document.querySelector("ul");
+var searchButton = document.getElementById("search-button");
+var cityEntered = document.getElementById("city-input");
+var pastCities = document.getElementById("past-searches");
 var citySearched;
 var lat;
 var lon;
+var pastSearches = [];
 
 
 searchButton.addEventListener("click", () => {
@@ -76,18 +69,19 @@ function getWeather() {
 function weatherCard(data) {
     let newDate = new Date().toDateString();
 
-    date.innerText = newDate;
-    city.innerText = "City: " + citySearched;
-    icon.innerHTML = `<img src = "https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png">`;
-    temp.innerText = "Temperature: " + data.current.temp + " °F"
-    humidity.innerText = "Humidity: " + data.current.humidity;
-    wind.innerText = "Wind Speed: " + data.current.wind_speed;
-    uv.innerText = "UV Index: " + data.current.uvi;
+    document.getElementById("date").innerText = newDate;
+    document.getElementById("city").innerText = citySearched;
+    document.getElementById("icon").innerHTML = `<img src = "https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png">`;
+    document.getElementById("temp").innerText = "Temperature: " + data.current.temp + " °F"
+    document.getElementById("humidity").innerText = "Humidity: " + data.current.humidity;
+    document.getElementById("wind").innerText = "Wind Speed: " + data.current.wind_speed;
+    document.getElementById("uv").innerText = "UV Index: " + data.current.uvi;
 
     forecastCard(data);
 };
 
 function forecastCard(data) {
+  let forecast = document.getElementById("forecast");
     forecast.innerHTML = "";
 
     for (let i = 1; i <= 5; i++) {

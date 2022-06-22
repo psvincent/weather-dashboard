@@ -12,18 +12,20 @@
    <header class="bg-blue text-white text-center p-1">
        <h1>Weather Dashboard</h1>
    </header>
-   <main class="container-fluid">
-    <section class="row">
+   <div class="container-fluid">
+    <div class="row">
         <div class="col-3 p-1 search-row">
-            <form class=" border p-1 text-center" id="city-search">
-                <h5>Search for a City</h5>
+            <h5>Search for a City</h5>
+            <div class=" border p-1 text-center">
                 <input id="city-input" type="text" placeholder="Enter City Name Here"/>
+                <div>
                 <button class="btn btn-primary" id="search-button" type="submit">Search</button>
-            </form>
+            </div>
         </div>
         <ul class="list-group" id="past-searches">
 
         </ul>
+        </div>
         <div class="col-sm-9 mt-3">
             <div class="col-6 mx-2" id="city-weather">
                 <h5 id ="city"></h5>
@@ -41,8 +43,9 @@
         <div class="row-col-sm-2 g-4 m-2 card" id="forecast">
 
         </div>
-    </section>
-   </main>
+    </div>
+</div>
+</div>
     
 
 
