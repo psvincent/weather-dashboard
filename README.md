@@ -8,4 +8,4 @@ This weather dashboard allows you to check the current weather and five day fore
 
 
 ## Link to Deployed App
-https://psvincent.github.io/weather-dashboard/?
+https://psvincent.github.io/weather-dashboard/
